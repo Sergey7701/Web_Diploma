@@ -698,6 +698,11 @@ a{text-decoration: none;}
 	padding-bottom: 6px;
 	background: transparent;
 }
+.call-back-window__p {
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
 .call-back-window__input {
 	font-size: 20px;
 	width: 95%;
