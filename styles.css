@@ -317,8 +317,8 @@ a{text-decoration: none;}
 	color: rgb(137, 147, 173);
 }
 .slider__img{
-	width: auto;
-	height: auto;
+	width: 370px;
+	height: 290px;
 	display: block;
 	margin-bottom: 15px;
 }
@@ -459,6 +459,10 @@ a{text-decoration: none;}
 	margin-bottom: 23px;
 }
 .contacts__a{color: black;}
+.contacts__a:hover{
+	text-decoration: underline;
+	color: #ff4e2e;
+}
 .icon{
 	font-family: FontAwesome;
 	font-weight: normal;
@@ -473,30 +477,31 @@ a{text-decoration: none;}
 .social__link {display: inline-block}
 .social__icon {
 	display: block;
-	background: url("img/social-sprite.png");
+	background-image: url("img/social-sprite-full.png");
 	height: 40px;
 	border: none;
 	margin: 17px 22px 0 0;
 	padding: 0;
 	background-repeat: no-repeat;
 	opacity: 0.6;
+	background-position-y: top;
 }
-
+.social__icon:hover {background-position-y: bottom;}
 #vk {
 	width: 35px;
-	background-position: -71px top;	
+	background-position-x: -71px;	
 }
 #facebook {
 	width: 16px;
-	background-position: 0 top;
+	background-position-x: 0;
 }
 #tweeter {
 	width: 30px;
-	background-position: -42px top;
+	background-position-x: -43px;
 }
 #instagram {
 	width: 27px;
-	background-position: -15px top;
+	background-position-x: -15px;
 }
 .footer-bottom {
     background-color: #31293c;

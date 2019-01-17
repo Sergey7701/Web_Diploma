@@ -17,6 +17,8 @@ $(function(){
 		$('.invisible').hide(1);
 		$('.dialog').offset({top: 200}).css({'left': '-200%', 'top': '200px'})	;		
 		$('.dialog').removeAttr('style');
+		$('html, .body').removeClass('no-scroll');
+		$('.nav-mini').removeAttr('id');
 	});
 	// Запрет перехода по кнопкам-ссылкам
 	$('.button_1').click(function(event){
@@ -116,10 +118,9 @@ $(function(){
 	//Всплывающее окно для звонка
 	// На кнопке
 	$('.button_2').click(function(event){
-		console.log(event);
 		if (event.target.className.includes('button_2') && event.target.id != "cancel"){
 			$('.dialog h2').text('Мы вам перезвоним');
-			$('#dialog__label2 p').text('Ваш телефон (обязательно)')
+			$('#dialog__label2 .call-back-window__p').text('Ваш телефон (обязательно)')
 			$('#dialog__label3').addClass('invisible');
 			$('.dialog').show(3000, $('.dialog').css('left', '0'));
 			// Чисто приблизительно для верхней кнопки
@@ -134,7 +135,7 @@ $(function(){
 	$('.call-me_mini').click(function(event){
 		if (event.target.className.includes('call-me_mini')){
 			$('.dialog h2').text('Мы вам перезвоним');
-			$('#dialog__label2 p').text('Ваш телефон (обязательно)')
+			$('#dialog__label2 .call-back-window__p').text('Ваш телефон (обязательно)')
 			$('#dialog__label3').addClass('invisible');
 			$('.dialog').show(3000, $('.dialog').css('left', '0'));
 			// Чисто приблизительно для верхней кнопки
@@ -148,7 +149,7 @@ $(function(){
 	$('.button_1 mobile').click(function(event){
 		if (event.target.className.includes('button_1 mobile')){
 			$('.dialog h2').text('Мы вам перезвоним');
-			$('#dialog__label2 p').text('Ваш телефон (обязательно)')
+			$('#dialog__label2 .call-back-window__p').text('Ваш телефон (обязательно)')
 			$('#dialog__label3').addClass('invisible');
 			$('.dialog').show(3000, $('.dialog').css('left', '0'));
 			// Чисто приблизительно для верхней кнопки
@@ -164,11 +165,10 @@ $(function(){
 		if (event.target.className.includes('button_1') && event.target.id != 'send' && !event.target.className.includes('button_1 mobile')){
 			$('.dialog h2').text('Мы вам ответим');
 			$('#dialog__label3').removeClass('invisible');
-			$('#dialog__label2 p').text('Ваш телефон')
+			$('#dialog__label2 .call-back-window__p').text('Ваш телефон')
 			$('#phone').removeAttr('style');
 			$('.dialog').show(3000, $('.dialog').css('left', '0'));
 			// Двигаем окошко
-			console.log($('body').height() - $(this).offset().top);
 			if ($('body').height() - $(this).offset().top  > 750){
 				$('.dialog').offset({top: $(this).offset().top + 100});
 			} else {
@@ -177,7 +177,7 @@ $(function(){
 		} else {
 			if (event.target.className.includes('button_1 mobile')){
 				$('.dialog h2').text('Мы вам перезвоним');
-				$('#dialog__label2 p').text('Ваш телефон (обязательно)')
+				$('#dialog__label2 .call-back-window__p').text('Ваш телефон (обязательно)')
 				$('#dialog__label3').addClass('invisible');
 				$('.dialog').show(3000, $('.dialog').css('left', '0'));
 				// Чисто приблизительно для верхней кнопки
@@ -223,7 +223,10 @@ $(function(){
 		if (result){
 			console.log('Имя - ', $('#name').val());
 			console.log('Телефон - ', $('#phone').val());
-			console.log('Емайл- ', $('#email').val());
+			console.log('Емайл - ', $('#email').val());
+			console.log('Сообщение - ', $('#message').val());
+			$('.dialog').offset({top: 200}).css({'left': '-200%', 'top': '200px'})	;		
+			$('.dialog').removeAttr('style');
 		}
 	});
 	

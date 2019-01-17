@@ -56,9 +56,9 @@
 </div>
 	<header class="header content wrap">
 		<nav class="nav_header desktop">
-			<a class="nav__item_header" href="#">Услуги</a>
-			<a class="nav__item_header" href="#">Портфолио</a>
-			<a class="nav__item_header" href="#">Стоимость</a>
+			<a class="nav__item_header" href="#skills" onclick="$('html, .body').remooveClass('no-scroll');">Услуги</a>
+			<a class="nav__item_header" href="#works" onclick="$('html, .body').removeClass('no-scroll');">Портфолио</a>
+			<a class="nav__item_header" href="#price" onclick="$('html, .body').remooveClass('no-scroll');">Стоимость</a>
 		</nav>
 		<nav class="nav_mini tablet mobile cursor-pointer" id="scroll_on"></nav>
 		<div class="button_2 right cursor-pointer desktop tablet">
@@ -87,7 +87,7 @@
 			</p>
 		</section>
 <!-- Что я делаю -->
-		<section class="skills wrap background_2 block-main-style">
+		<section class="skills wrap background_2 block-main-style" id="skills">
 			<h2 class="h2">Что я делаю</h2>
 			<div class="skills__content content">
 				<div class="skills__skill">
@@ -112,7 +112,7 @@
 			</p>
 		</section>
 <!-- Примеры моих работ -->
-		<section class="works wrap block-main-style">
+		<section class="works wrap block-main-style" id="works">
 			<h2 class="h2">Примеры моих работ</h2>
 			<div class="slider">
 				<div class="slider__arrows">
@@ -132,11 +132,11 @@
 				</div>
 				<div class="slider__item">
 					<img class="slider__img" src="img/layer_5.png" alt="">
-					<small class="p">Test 1</small>
+					<small class="p">Новостное агентство</small>
 				</div>
 				<div class="slider__item">
 					<img class="slider__img" src="img/layer_4.png" alt="">
-					<small class="p">Test 2</small>
+					<small class="p">Салон красоты</small>
 				</div>
 				<div class="slider__arrows">
 					<div class="slider__arrow arrow-right cursor"></div>
@@ -157,7 +157,7 @@
 				<div class="flying-elements__element flying-elements__element_style--bottom" id="me5">{&nbsp;}</div>
 				<div class="flying-elements__element flying-elements__element_style--bottom" id="me6">&lt;div&gt;</div>
 			</div>
-			<div class="price content">
+			<div class="price content" id="price">
 				<h2 class="price__h2">Адаптивная вёрстка под все устройства и&nbsp;браузеры от&nbsp;1000&nbsp;рублей всего за&nbsp;4&nbsp;часа.*</h2>
 				<p><small class="price__small">* Сроки и стоимость могут отличаться от&nbsp;заявленных и&nbsp;рассчитываются индивидуально,<wbr> в&nbsp;зависимости&nbsp;от&nbsp;сложности задач.</small></p>
 			</div>
@@ -166,9 +166,9 @@
 <!-- Footer -->
 	<footer class="footer content">	
 		<nav class="nav_footer">
-			<a class="nav__item_footer" href="#">Услуги</a>
-			<a class="nav__item_footer" href="#">Портфолио</a>
-			<a class="nav__item_footer" href="#">Стоимость</a>
+			<a class="nav__item_footer" href="#skills" onclick="$('html, .body').remooveClass('no-scroll');">Услуги</a>
+			<a class="nav__item_footer" href="#works" onclick="$('html, .body').removeClass('no-scroll');">Портфолио</a>
+			<a class="nav__item_footer" href="#price" onclick="$('html, .body').remooveClass('no-scroll');">Стоимость</a>
 		</nav>
 		<div class="contacts">
 			<p class="contacts__p"><span class="icon fa-phone"></span>+7 (991) 349-07-39</p>
@@ -201,12 +201,16 @@
 				</label>
 				<label id="dialog__label2">
 					<span class="call-back-window__p">Ваш телефон (обязательно)</span>
-					<input class="call-back-window__input" type="tel" id="phone">
+					<input class="call-back-window__input" type="tel" id="phone" placeholder="Ваш телефон">
 				</label>
 				<label id="dialog__label3">
 					<span class="call-back-window__p">Ваша почта (обязательно)</span>
-					<input class="call-back-window__input" type="email" id="email">
+					<input class="call-back-window__input" type="email" id="email" placeholder="Ваша почта">
 				</label>
+				<label id="dialog__label4">
+					<span class="call-back-window__p">Комментарий</span>
+				</label>	
+				<textarea class="call-back-window__input" id="message"></textarea>
 			</form>	
 				<p>
 					<input class="button_1 button_1--mobile" type="submit" id="send" value="Отправить">
