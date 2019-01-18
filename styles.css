@@ -55,28 +55,6 @@ a{text-decoration: none;}
 	margin-right: 35px;
 	font-size: 16px;
 	color: rgb(31, 31, 36);
-}
-.nav_floating {
-	position: relative;
-	display: block;
-	width: 0;
-	height: 0;
-	overflow: visible;
-	background: red;
-}
-.header{overflow: visible}
-.nav__item_header--floating-start{
-	
-}
-.nav__item_header--floating {
-	font-size: 32px;
-	position: relative;
-	display: block;
-	top: 70px;
-	left: 1330px;
-	width: 1000px;
-	opacity: 0.85;
-	z-index: 2;
 	-webkit-transition: 0.5s easy 0.5s;
 	-o-transition: 0.5s easy 0.5s;
 	transition: 0.5s easy 0.5s;
@@ -93,15 +71,51 @@ a{text-decoration: none;}
 	        transition-duration: 0.5s;
 	--moz-transition-duration: 0.5s;
 }
+.nav_floating {
+	position: relative;
+	display: block;
+	width: 0;
+	height: 0;
+	overflow: visible;
+	background: red;
+}
+.header{overflow: visible}
+.transition{
+	-webkit-transition: 0.5s easy 0.5s;
+	-o-transition: 0.5s easy 0.5s;
+	transition: 0.5s easy 0.5s;
+	-webkit-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	--moz-transition-property: all;
+	-webkit-transition-delay: 0.5s;
+	     -o-transition-delay: 0.5s;
+	        transition-delay: 0.5s;
+	--moz-transition-delay: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+	--moz-transition-duration: 0.5s;
+}
+.nav__item_header--floating {
+	font-size: 32px;
+	position: relative;
+	display: block;
+	top: 70px;
+	left: 1330px;
+	width: 1000px;
+	opacity: 0.85;
+	z-index: 2;
+}
 .nav__item_header--floating-move{
 	left: 0px;
 }
 .nav__item_header--floating:hover {
-	text-decoration: underline;
-	color: #ff4e2e;
+	border-bottom: 1px solid #ff4e2e;
+	color: #ff4e2e;	
 }	
 .nav__item_header:hover{
-	text-decoration: underline;
+	border-bottom: 1px solid #ff4e2e;
 	color: #ff4e2e;
 }
 .nav_mini {
@@ -445,6 +459,10 @@ a{text-decoration: none;}
 	color: rgb(137, 147, 173);
 	line-height: 1.95;
 }
+.nav__item_footer:hover {
+	text-decoration: underline;
+	color: #ff4e2e;
+}
 .contacts{
 	-ms-flex-preferred-size: 45%;
 	    flex-basis: 45%;
@@ -585,7 +603,7 @@ a{text-decoration: none;}
 		padding-left: 5px;
 		padding-right: 5px;
 	}
-	.h2_mobile {font-size: 38px;}
+	.h2 {font-size: 30px;}
 	.content {
 		max-width: 1024px;
 		padding-left: 20px;
